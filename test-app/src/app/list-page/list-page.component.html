@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{active: tab == 0}"
+             [routerLink]="['/navigator']" [queryParams]="{tab: '0'}">Income</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{active: tab == 1}"
+             [routerLink]="['/navigator']" [queryParams]="{tab: '1'}">Outcome</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{active: tab == 2}"
+             [routerLink]="['/navigator']" [queryParams]="{tab: '2'}">Loans</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{active: tab == 3}"
+             [routerLink]="['/navigator']" [queryParams]="{tab: '3'}">Investments</a>
+        </li>
+      </ul>
+
+      <table class="table justify-content-center">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Account</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let client of detailsArr; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ client.last }} {{ client.first }}</td>
+          <td>{{ client.amount }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-7"></div>
+    <div class="col-5">
+      <button type="submit" class="btn btn-primary"
+              [routerLink]="['/']">Summary page</button>
+    </div>
+  </div>
+</div>
+
+
+

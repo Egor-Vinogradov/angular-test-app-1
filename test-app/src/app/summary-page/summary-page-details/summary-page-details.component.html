@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="p-3 border border-secondary">
+        <div class="col-12">
+          <h3>{{ counter }}</h3>
+        </div>
+        <br>
+        <div class="col-12">
+          <h5>{{ typeName }}</h5>
+        </div>
+        <br>
+        <div class="col-12">
+          <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary"
+                      [routerLink]="['/navigator']" [queryParams]="{tab: typeNumber - 1}">See all</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

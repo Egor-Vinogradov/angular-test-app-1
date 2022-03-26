@@ -1,0 +1,28 @@
+<div class="container-fluid text-center">
+  <div class="row">
+    <div class="col-12">
+      <div class="p-3 border border-secondary bg-light">
+        <br>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="p-3 border border-secondary">
+        <h1>Welcome</h1>
+        <br>
+        <h5>With supporting text below as a natural lead-in to additional content</h5>
+        <br>
+        <button type="submit" class="btn btn-primary"
+                [routerLink]="['/navigator']" [queryParams]="{tab: '0'}">See transactions</button>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="p-3 border border-secondary bg-light">
+        <span class="align-middle">
+          <h5>You have {{ count }} transaction</h5>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
